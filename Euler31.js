@@ -15,7 +15,7 @@ var objective = 200, //L2
     p2Sum=0,
     p1 = 1,
     p1Sum=0,
-    count = 0;
+    count = 1;//Not sure why count++ doesn't effect count the first go around...
 
 while (l1Sum <= objective) {
     while ((p50Sum+l1Sum) <= objective) {
@@ -47,8 +47,10 @@ while (l1Sum <= objective) {
     p50Sum = 0;
     l1Sum += l1;
 }
+
 var attemptedAnswers = ['73681', '69118'];
-if(attemptedAnswers.indexOf(count)) {
+
+if(attemptedAnswers.indexOf(count) !== -1) {
     console.error('**wrong**')
 }
 console.log(count);
